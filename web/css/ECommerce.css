@@ -1,0 +1,446 @@
+/* Global properties ======================================================== */
+
+body {font-family:Arial, Helvetica, sans-serif;font-size:100%; color:#7f7f7f;min-width:960px;background:#000}
+.ic {border:0;float:right;background:#fff;color:#f00;width:50%;line-height:10px;font-size:10px;margin:-220% 0 0 0;overflow:hidden;padding:0}
+.bg {width:100%; background:url(../img/bg-top.jpg) center 0 no-repeat;}
+
+.main {
+	width:960px; 	
+	padding:0;
+	margin:0 auto;
+	font-size:13px;
+	line-height:25px;
+}
+.container {
+	width:940px; 	
+	padding:0;
+	margin:0 auto;
+}
+.wrapper {width:100%; overflow:hidden;}
+.aligncenter {text-align:center;}
+
+a, b, body,
+center, font, footer, form, 
+h1, h2, h3, h4, h5, h6, header, html,
+ol, span, table, tbody, tfoot, thead, th, tr,u, ul{
+    background: transparent;
+    border: 0 none;
+    font-size: 100%;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    vertical-align: top; }
+
+ol, ul {
+	list-style: none;
+}
+
+.menu li a,
+.list-1 li a,
+h1 a {text-decoration:none;}	
+
+/*********************************header*************************************/
+header {
+	width:100%;
+	background:#f2f2f2;
+	position:relative; 
+	z-index:2;
+}
+
+.row-top {
+	width:100%;
+	padding:10px 0;
+	background:#000;
+}
+
+h1 {
+	padding:0px 0 0 10px; 
+	float:left;
+}
+h1 a {
+	display:inline-block;
+	font-size:50px;
+	font-weight:normal;
+	line-height:1.4em;
+	color:#fff;
+	letter-spacing:-3px;
+}
+
+h1 a span {color:#43b043}
+		
+h2 {
+	font-size:60px;
+	font-weight:normal;
+	line-height:108px;
+	color:#fff;
+	text-align:center;
+}
+h2 span {color:#000;}
+	
+/***** menu *****/
+.menu {
+	padding:26px 10px 0 0; 
+	float:right;
+}
+.menu li {
+	float:left;
+	padding-left:40px;
+}
+.menu li a { 
+	font-size:14px; 
+	line-height:18px; 
+	padding:0; 
+	color:#fff; 
+}
+.menu li a.active,
+.menu > li > a:hover {color:#43b043;}
+
+.row-bot {
+	width:100%;
+	background:url(../img/row-bot-tail.gif) center top repeat-x;
+}
+.row-bot-bg {
+	width:100%;
+	min-height:122px;
+	background:url(../img/row-bot-bg.jpg) center top no-repeat;
+}
+.pad {
+	padding-top: 20px;
+}
+
+#content {
+	width:100%; 
+	padding:15px 0 50px;
+	background:#f2f2f2;
+	position:relative;
+	z-index:1;
+}
+
+
+footer {
+	width:100%; 
+	padding:23px 0 30px;
+	color:#fff;
+}
+	footer a {color:#c42e02;}
+	footer span {display:block;}
+	footer .main {font-size:14px; line-height:25px;}
+
+
+#header {    
+    width:100%;
+    background:#f2f2f2;
+    position:relative; 
+    z-index:2;
+}
+table {
+    margin: 0 20px;
+    border-spacing: 0;
+    text-align: center;
+    border: none;
+}
+
+a {
+    color: inherit;
+    text-decoration: underline;
+}
+
+a:hover { text-decoration: none }
+
+a:visited { color: inherit }
+
+img { border: none }
+
+input, select { margin: 5px }
+
+li { margin: 10px 0 }
+
+label { line-height: 30px }
+
+label.error {
+    font-size: smaller;
+    line-height: 20px;
+    font-style: italic;
+}
+
+
+/* general styles */
+
+
+#singleColumn {
+    margin: 20px 30px;
+    text-align: left;
+}
+
+.lightBlue { background-color: #edf8f7 }
+
+.white { background-color: #fff }
+
+.bubble {
+    font-weight: bold;
+    background-color: rgb(184, 228,178);
+    padding: 5px;
+    color: inherit;
+    display: inline;
+    border-radius: 4px;
+    color: white;
+}
+
+.hMargin { margin: 0 30px }
+
+.smallText { font-size: small }
+
+.reallySmallText { font-size: xx-small }
+
+.header {
+    background-color: #c3e3e0;
+    height: 30px;
+}
+
+.error {
+    color: #c00;
+    font-style: italic;
+}
+
+.tableHeading {
+    font-weight: bold;
+    background-color: #edf8f7;
+}
+
+
+
+
+/* styles for elements contained in the header, i.e.,
+   shopping cart widget, language toggle, and logo */
+
+
+#checkout{
+    font-size: x-large;
+    font-weight: bold;
+}
+#adminConsole{
+    font-size: x-large;
+    font-weight: bold;
+}
+#total{
+    font-size: x-large;
+    font-weight: bold;
+}
+#widgetTable{
+   border:none;
+   margin: auto;
+}
+
+#cart {
+    position: absolute;
+    margin: 5px 0 0 2px;
+}
+
+.horizontalMargin {
+    margin-left: 28px;
+    margin-right: 5px
+}
+
+#viewCart {
+    text-align: left;
+    width: 210px;
+}
+
+.headerWidget {
+    width: 194px;
+    margin: 20px 0;
+    font-size: small;
+    line-height: 25px;
+}
+
+
+
+
+#welcomeText {
+    margin: 30px 5px 0 30px;
+    line-height: 1.4em;
+}
+
+
+
+#RightColumn {
+    margin-top: 10px;
+    width: 650px;
+    margin: 0 auto;
+}
+
+
+
+#productTable {
+    width: 600px;
+    position: relative;
+    z-index: 1;
+}
+
+#productTable td { width: 145px }
+#productTable tr { 
+    height: 85px;
+    vertical-align: middle;
+}
+
+
+/* cart page styles */
+#actionBar {
+    margin: 30px;
+    width: 750px;
+    text-align: center;
+}
+
+
+#cartTable { width: 750px }
+
+#cartTable td {
+    width: 145px;
+    height: 90px;
+}
+#cartTable tr {
+    vertical-align: middle;
+}
+
+
+
+/* checkout page styles */
+#checkoutTable {
+    width: 405px;
+    padding: 10px;
+    background-color: rgb(184, 228,178);   
+    border: none;
+}
+
+#checkoutTable td {
+    vertical-align: top;
+    text-align: right;
+    margin: 5px;
+}
+
+.inputField { width: 190px }
+
+#infoBox { padding: 10px 25px 0 250px }
+
+#priceBox {
+    padding: 10px;
+    border: none;
+    background-color: #c3e3e0;
+    border-radius: 4px;
+}
+
+#priceBox td {
+    text-align: right;
+    padding: 5px;
+}
+
+.checkoutPriceColumn {
+    width: 80px;
+    font-weight: bold;
+}
+
+.total { border-bottom: 1px solid #444 }
+
+.indent { margin-left: 6em }
+
+
+/* confirmation page styles */
+#confirmationText {
+    margin: 0 0px 20px;
+    padding: 10px;
+    background-color: rgb(184, 228,178);
+    float: left;
+    border-radius: 4px;
+}
+
+.summaryColumn {
+    margin-top: 15px;
+    width: 50%;
+}
+
+.detailsTable { 
+    text-align: left;
+    margin:auto;
+
+}
+
+.detailsTable th { padding: 5px 10px }
+
+.detailsTable td {
+    padding: 5px 10px 5px 20px;
+    font-size: small;
+    font-family: "Courier New", courier, monospace;
+}
+
+#orderSummaryTable { width: 100% }
+
+#deliveryAddressTable {
+    width: 70%; 
+    margin:0;
+}
+
+#deliveryAddressTable td {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.quantityColumn {
+    text-align: center;
+    width: 62px;
+}
+
+.confirmationPriceColumn {
+    width: 90px;
+    font-weight: normal;
+}
+
+#deliverySurchargeCellLeft {
+    text-align: right;
+    padding: 0;
+}
+
+#deliverySurchargeCellRight { padding: 0 20px }
+
+#totalCellLeft {
+    text-align: right;
+    padding: 0;
+}
+
+#totalCellRight { padding: 0 20px }
+
+#dateProcessedRow { padding: 2px 0 10px 20px }
+
+
+
+
+#adminMenu {
+    margin: auto;
+    width: 350px;
+    border: none;
+    background-color: rgb(184, 228,178);
+    border-radius: 4px;
+}
+
+#adminMenu p { margin-left: 15px }
+
+#adminTable {
+    width: 600px;
+    background-color: #edf8f7;
+}
+
+.alignLeft { text-align: left }
+
+.selectedRow {
+    background-color: #c3e3e0;
+    cursor: pointer;
+}
+
+.noDecoration { text-decoration: none }
+
+.rigidWidth { width:200px }
+
+.embedded {
+    margin: 0;
+    border: none;
+}

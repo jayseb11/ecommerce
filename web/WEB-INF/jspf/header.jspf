@@ -1,0 +1,135 @@
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
+
+<%@page pageEncoding="UTF-8" contentType="text/html; charset=UTF-8"%>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<head>
+    <title>Order Page</title>
+    <meta charset="utf-8">
+   
+    <link rel="stylesheet" href="css/ECommerce.css" type="text/css" media="screen">
+ 
+    <script src="js/cufon-yui.js" type="text/javascript"></script>
+    <script src="js/cufon-replace.js" type="text/javascript"></script> 
+    <script src="js/Dynalight_400.font.js" type="text/javascript"></script>
+   
+
+
+        </head>
+
+<body>
+    <header>
+    	<div class="row-top">
+        	<div class="main">
+            	<div class="wrapper">
+                	<h1><a href="/ECommerce">KeralaKitchenHouston<span>.com</span></a></h1>
+                    <nav>
+                        <ul class="menu">
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Menu</a></li>
+                            <li><a href="#">Testimonial </a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    <div class="row-bot">
+        	<div class="row-bot-bg">
+            	<div class="main">
+                    <div class="pad">
+                	<h2>Impressive Selection <span>for any Occasion</span></h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    
+
+	<!--==============================content================================-->
+
+    <section id="content">
+
+        <div class="main">
+
+           <div id="widgetBar"> 
+                <%-- checkout widget --%>
+                <table class="aligncenter" id="widgetTable">
+                    <tr>
+                        <td>
+                            <div class="headerWidget">                     
+
+                              <c:if test="${!empty cart && cart.numberOfItems != 0 &&
+
+                                            !fn:contains(pageContext.request.servletPath,'/checkout') &&
+                                            requestScope['javax.servlet.forward.servlet_path'] ne '/checkout' &&
+
+                                            !fn:contains(pageContext.request.servletPath,'/cart') &&
+                                            requestScope['javax.servlet.forward.servlet_path'] ne '/cart' &&
+
+                                            validationErrorFlag ne true &&
+                                            orderFailureFlag ne true}">
+
+                                <a href="<c:url value='checkout'/>" class="bubble">
+                                  Proceed to checkout
+                                </a>
+                              </c:if>
+                            </div>
+                        </td>
+                         <td>
+                         <c:if test="${!fn:contains(pageContext.request.servletPath,'/confirmation') &&
+                                            requestScope['javax.servlet.forward.servlet_path'] ne '/confirmation' &&
+                                       !fn:contains(pageContext.request.servletPath,'/viewCart') &&
+                                            requestScope['javax.servlet.forward.servlet_path'] ne '/viewCart' &&
+                                      !fn:contains(pageContext.request.servletPath,'/updateCart') &&
+                                            requestScope['javax.servlet.forward.servlet_path'] ne '/updateCart' 
+                               }">
+                          <%-- shopping cart widget --%>
+                                <div class="headerWidget" id="viewCart">
+
+                                  <img src="/ECommerce/img/cart.gif" alt="shopping cart icon" id="cart">
+
+                                <%-- If 'numberOfItems' property doesn't exist, or if number of items
+                                     in cart is 0, output '0', otherwise output 'numberOfItems' --%>
+                                  <span class="horizontalMargin">
+                                    <c:choose>
+                                      <c:when test="${cart.numberOfItems == null}">
+                                        0
+                                      </c:when>
+                                      <c:otherwise>
+                                        ${cart.numberOfItems}
+                                      </c:otherwise>
+                                    </c:choose>
+
+                                <%-- Handle singular/plural forms of 'item' --%>
+                                    <c:choose>
+                                      <c:when test="${cart.numberOfItems == 1}">
+                                        item
+                                      </c:when>
+                                      <c:when test="${cart.numberOfItems == 2 ||
+                                                      cart.numberOfItems == 3 ||
+                                                      cart.numberOfItems == 4}">
+                                        items
+                                      </c:when>
+                                      <c:otherwise>
+                                          items
+                                      </c:otherwise>
+                                    </c:choose>
+                                  </span>
+
+                                    <c:if test="${!empty cart && cart.numberOfItems != 0 &&
+
+                                                  !fn:contains(pageContext.request.servletPath,'/cart') &&
+                                                  requestScope['javax.servlet.forward.servlet_path'] ne '/cart'}">
+
+                                      <a href="<c:url value='viewCart'/>" class="bubble">
+                                          View Cart
+                                      </a>
+                                    </c:if>
+                                  </div>
+                                 </c:if>
+                         </td>
+                     </tr>
+                 </table>
+                </div>
